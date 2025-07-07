@@ -6,7 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "./generated/"
+  output   = "./generated"
 }
 
 datasource db {
@@ -22,6 +22,7 @@ model User {
 
   username    String  @unique
   displayName String  @map("display_name")
+  avatar      String
   bio         String?
 
   createdAt DateTime @default(now())
